@@ -1,0 +1,54 @@
+###
+
+GET http://localhost:3000/index
+
+###
+
+GET http://localhost:3000/post/
+
+###
+
+
+GET http://localhost:3000/post?sender=123456
+
+###
+
+GET http://localhost:3000/post?sender=1234567
+
+
+### 
+GET http://localhost:3000/post/637927b1961374afbe86196f
+
+
+###
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "message": "this is my new message",
+    "sender":"123456"
+}
+
+###
+
+###
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "message": "this is my new message",
+    "sender":"12345678"
+}
+
+###
+
+
+
+PUT http://localhost:3000/post/637927f4961374afbe861976
+Content-Type: application/json
+
+{
+    "message": "this is my new message after update",
+    "sender":"1234566"
+}
+###
