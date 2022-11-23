@@ -19,7 +19,7 @@ const getPostById = async (req, res) => {
   if (req.params.id == null || req.params.id == undefined) {
     res.status(400).send({
       status: "failed",
-      message: res.err.message
+      message: res.err.message,
     });
   }
   try {
@@ -28,7 +28,7 @@ const getPostById = async (req, res) => {
   } catch (error) {
     res.status(400).send({
       status: "failed",
-      message: res.err.message
+      message: res.err.message,
     });
   }
 };
@@ -37,7 +37,7 @@ const addNewPost = async (req, res) => {
   console.log("add new post");
   const post = new Post({
     message: req.body.message,
-    sender: req.body.sender
+    sender: req.body.sender,
   });
 
   try {
@@ -52,7 +52,7 @@ const updatePostById = async (req, res) => {
   if (req.params.id == null || req.params.id == undefined) {
     res.status(400).send({
       status: "fail",
-      message: res.err.message
+      message: res.err.message,
     });
   }
   try {

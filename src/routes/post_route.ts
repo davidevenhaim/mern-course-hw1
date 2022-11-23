@@ -10,4 +10,4 @@ router.post("/", post.addNewPost);
 
 router.put("/:id", post.updatePostById);
 
-export default router 
+export default router;
